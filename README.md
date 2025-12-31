@@ -60,6 +60,7 @@ SELECT
 COUNT([name]) AS Total_Projects
 FROM [ks-projects-201801]
 ```
+---
 ```SQL
 --2) Project By State Distribution
 
@@ -70,6 +71,7 @@ FROM [ks-projects-201801]
 Group By [state]
 Order By COUNT(name) DESC
 ```
+---
 ```SQL
 --3) Success Rate By Main Category
 SELECT
@@ -81,6 +83,7 @@ FROM [ks-projects-201801]
 GROUP BY main_category
 ORDER BY Success_rate DESC
 ```
+---
 ```SQL
 --4) AVERAGE GOAL AND PLEDGED (USD) by Main Category
 SELECT
@@ -91,6 +94,7 @@ FROM [ks-projects-201801]
 Group by main_category
 Order by ROUND(AVG(goal),2) DESC
 ```
+---
 ```SQL
 --5) AVERAGE BACKERS BY STATE
 
@@ -101,6 +105,7 @@ FROM [ks-projects-201801]
 GROUP BY state
 ORDER BY AVG(backers) DESC
 ```
+---
 ```SQL
 --6) Projects by Year
 
@@ -111,6 +116,7 @@ FROM [ks-projects-201801]
 GROUP BY YEAR(launched)
 ORDER BY COUNT(name) DESC
 ```
+---
 ```SQL
 --7) MONTHLY SUCCESS RATE
 
@@ -123,6 +129,7 @@ FROM [ks-projects-201801]
 GROUP BY MONTH(launched)
 ORDER BY Success_rate DESC
 ```
+---
 ```SQL
 --8) TOP 10 MOST BACKED PROJECT
 
@@ -135,6 +142,7 @@ FROM (SELECT
 FROM [ks-projects-201801]) tt
 WHERE R_n <=10
 ```
+---
 ```SQL
 --9) TOP 10 HIGHEST FUNDED PROJECT (USD)
 
@@ -147,6 +155,7 @@ ROW_NUMBER() OVER(ORDER BY usd_pledged_real DESC) r_n
 FROM [ks-projects-201801]) TT
 WHERE r_n<=10
 ```
+---
 ```SQL
 -- 10) HOW PROJECT GOALS AFFECT SUCCESS RATE
 SELECT
@@ -169,6 +178,7 @@ GROUP BY (CASE
 			ELSE '<$100000K'
 		END)
 ```
+---
 ```SQL
 --11) Which Categories perform best in each country?
 SELECT
@@ -182,6 +192,7 @@ Group By main_category,country
 HAVING COUNT(*) >= 50  -- Needed to remove projects with very little project
 ORDER BY Success_rate DESC
 ```
+---
 ```SQL
 --12) Campaign Duration Impact on Success
 
