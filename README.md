@@ -243,6 +243,7 @@ ORDER BY Success_rate DESC
 - Creators should evaluate how similar projects perform in their region and tailor marketing strategies accordingly
   
 ## Limitations
+---
 - The dataset is pre-cleaned, so real world data quality challenges are limited
 - The analysis is based on historical data up to 2018
 - Campaign success is measured only by funding goal achievement, not profitability
