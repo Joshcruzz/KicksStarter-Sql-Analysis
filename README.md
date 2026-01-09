@@ -15,7 +15,7 @@
   
 ## Project Overview
 ---
-This project analyses historical KickStarter campaign data to identify the key factors that influence projects success and failure. Using SQL in Microsoft SQL Server, I explored different trends across categories,countries, funding goals, backers, countries and campaign duration to uncover patterns that drive crowdfunding outcomes.
+Used SQL to explore Kickstarter campaign data to uncover patterns in funding success. Identified key predictors of campaign outcomes and translated findings into strategic recommendations for future campaign planning. I explored different trends across categories,countries, funding goals, backers, countries and campaign duration to uncover patterns that drive crowdfunding outcomes.
 
 ## Data Sources
 ---
